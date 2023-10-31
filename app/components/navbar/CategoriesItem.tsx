@@ -18,7 +18,9 @@ const CategoriesItem: React.FC<CategoriesItemProps> = ({
   return (
     <div
       onClick={() => router.push(`/category=${name}`)}
-      className={`flex items-center gap-1 cursor-pointer`}
+      className={`${
+        selected ? "border-b-2 border-black" : ""
+      } pb-2 flex items-center gap-1 cursor-pointer`}
     >
       <Icon size={20} />
       <div className="tracking-wider">{name}</div>

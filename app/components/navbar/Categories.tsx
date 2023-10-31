@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 
 export const categories = [
   {
-    name: "Tatil Köyü",
+    name: "Tatil-Köyü",
     icon: FaUmbrellaBeach,
   },
   {
@@ -25,16 +25,16 @@ export const categories = [
 
 const Categories = () => {
   const params = useSearchParams();
-  const urlitem = params.get("category");
-  console.log(urlitem);
+  const urlitem = params?.get("category");
+
   return (
-    <div className="flex items-center gap-10">
+    <div className="flex items-center gap-7">
       {categories.map((cat, i) => (
         <CategoriesItem
           key={i}
           name={cat.name}
           icon={cat.icon}
-          selected={false}
+          selected={urlitem == cat.name}
         />
       ))}
     </div>
