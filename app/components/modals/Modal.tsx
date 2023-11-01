@@ -38,6 +38,7 @@ const Modal: React.FC<ModalProps> = ({
         </div>
         <div>{bodyElement}</div>
         <Button onSubmit={submitFunc} btnLabel={btnLabel} />
+        {footerElement}
       </div>
     </div>
   );

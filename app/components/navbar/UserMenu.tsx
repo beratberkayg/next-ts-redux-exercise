@@ -3,8 +3,12 @@ import Image from "next/image";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import UserMenuItem from "./UserMenuItem";
+import { useDispatch } from "react-redux";
+import { loginModalFunc, registerModalFunc } from "@/app/redux/modalSlice";
 const UserMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const dispatch = useDispatch();
+
   return (
     <div
       onClick={() => setOpenMenu(!openMenu)}
@@ -22,8 +26,18 @@ const UserMenu = () => {
 
       {openMenu && (
         <div className="absolute bg-white shadow-lg shadow-gray-500 w-[150px] top-16 right-0">
-          <UserMenuItem name="Sign In" onClick={() => {}} />
-          <UserMenuItem name="Sign Up" onClick={() => {}} />
+          <UserMenuItem
+            name="Sign In"
+            onClick={() => {
+              dispatch(loginModalFunc);
+            }}
+          />
+          <UserMenuItem
+            name="Sign Up"
+            onClick={() => {
+              dispatch(registerModalFunc);
+            }}
+          />
         </div>
       )}
     </div>
