@@ -29,13 +29,13 @@ const UserMenu = () => {
           <UserMenuItem
             name="Sign In"
             onClick={() => {
-              dispatch(loginModalFunc);
+              dispatch(loginModalFunc());
             }}
           />
           <UserMenuItem
             name="Sign Up"
             onClick={() => {
-              dispatch(registerModalFunc);
+              dispatch(registerModalFunc());
             }}
           />
         </div>

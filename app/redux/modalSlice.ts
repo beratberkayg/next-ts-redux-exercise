@@ -13,7 +13,7 @@ const initialState: ModalState = {
 };
 
 export const modalSlice = createSlice({
-  name: "counter",
+  name: "modalSlice",
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {

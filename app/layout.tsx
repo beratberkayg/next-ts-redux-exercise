@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import MountedClient from "./components/MountedClient";
 import RegisterModal from "./components/modals/RegisterModal";
 import ReduxProvider from "./providers/ReduxProvider";
+import LoginModal from "./components/modals/LoginModal";
 
 const newFont = Nunito({
   subsets: ["latin"],
@@ -21,7 +22,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             onClose={() => {}}
             btnLabel="Register"
             title="Register"
-          /> }  */}
+          /> }   */}
+            <LoginModal />
             <RegisterModal />
             <Navbar />
           </MountedClient>
